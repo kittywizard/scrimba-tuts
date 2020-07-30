@@ -6,6 +6,16 @@ body {
 
 .header {
     color: #5C887D;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+}
 
+.entry-textbox {
+    width: 20em;
+    height: 10em;
+    padding: 1em;
+    border-radius:15px;
+    margin-bottom: 0.5em;
+    background-color: seashell;
+    border: unset;
 }
