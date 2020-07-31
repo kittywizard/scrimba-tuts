@@ -19,3 +19,12 @@ body {
     background-color: seashell;
     border: unset;
 }
+
+.button {
+    border-radius: 5px;
+    padding: 0.5em;
+    text-align: right;
+    border: unset;
+    background: slategray;
+    color: white;
+}
