@@ -2,6 +2,8 @@ body {
     margin: 5%;
     font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
     text-align: center;
+    display: grid;
+    justify-content: center;
 }
 
 .header {
@@ -20,10 +22,13 @@ body {
     border: unset;
 }
 
+.entry-textbox:focus {
+    outline: none;
+}
+
 .button {
     border-radius: 5px;
-    padding: 0.5em;
-    text-align: right;
+    padding: 0.5em 1em;
     border: unset;
     background: slategray;
     color: white;
