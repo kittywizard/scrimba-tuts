@@ -33,3 +33,13 @@ body {
     background: slategray;
     color: white;
 }
+
+#entries {
+    background-color: #5C887D;
+    color: seashell;
+    border-radius: 5px;
+    margin-top: 2em;
+    padding: .5em;
+    text-align: left;
+    display: none;
+}
