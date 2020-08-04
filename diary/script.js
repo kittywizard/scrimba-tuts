@@ -1,12 +1,16 @@
 const entryForm = document.getElementById('entryForm');
 const entrySection = document.getElementById('entries');
-const text = document.getElementsByClassName('entry-textbox');
-
-
-entryForm.addEventListener('submit', addEntry);
+const text = document.getElementsByClassName('entry-textbox'); //this returns a collection which is basically an array
 
 function addEntry(e){
-    e.preventDefault();
-    console.log(text);
 
+    let entryDiv = document.createElement('div');
+    entryDiv.className = "single-entry";
+    entryDiv.innerText = text[0].value;
+    console.log(entryDiv);
+
+    entrySection.appendChild(entryDiv);
+    e.preventDefault();
 }
+
+entryForm.addEventListener('submit', addEntry);
