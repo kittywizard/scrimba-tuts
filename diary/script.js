@@ -2,6 +2,8 @@ const entryForm = document.getElementById('entryForm');
 const entrySection = document.getElementById('entries');
 const text = document.getElementsByClassName('entry-textbox'); //this returns a collection which is basically an array
 const entriesNav = document.querySelector('.entries-nav');
+let buttonCount = 1; 
+
 
 function addEntry(e){
 
@@ -17,9 +19,11 @@ function addEntry(e){
 
     const displayButton = document.createElement("button");
     displayButton.className = "entry-button";
-    displayButton.innerText = 1;
+    displayButton.innerText = buttonCount;
     entriesNav.appendChild(displayButton);
 
+    buttonCount++;
+    console.log(buttonCount);
     e.preventDefault();
 }
 
