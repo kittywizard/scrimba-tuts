@@ -22,9 +22,20 @@ function addEntry(e){
     displayButton.innerText = buttonCount;
     entriesNav.appendChild(displayButton);
 
+    displayButton.addEventListener('click', function(){
+    
+        const allEntries = document.querySelectorAll(".single-entry");
+        for (var i = 0; i < allEntries.length; i++){
+            
+            allEntries[i].style.display = "none";
+        }
+
+        entryDiv.style.display = "block";
+    });
+
     buttonCount++;
-    console.log(buttonCount);
     e.preventDefault();
 }
+
 
 entryForm.addEventListener('submit', addEntry);

@@ -51,5 +51,11 @@ body {
     color: #5C887D;
     font-weight: 700;
     margin: .5em;
+}
 
+.entry-button:hover {
+    cursor: pointer;
+}
+.entries-nav {
+    padding-bottom: 1em;
 }
