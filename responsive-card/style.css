@@ -1,3 +1,7 @@
+body {
+    font-family: sans-serif;
+}
+
 .card {
     background-color: #000;
     color: #fff;
@@ -23,7 +27,22 @@ p {
     margin-bottom: 0; /* turning off the margin bottom on the last footer element */
 }
 
-strong {
-    background: yellow;
-    color: #000;
+.highlight {
+    color: #FFE600;
+}
+
+a, a:visited {
+    text-decoration: underline;
+    color: #FFE600;
+    font-weight: 700;
+}
+
+/* important for accessbility, and people who tab through pages */ 
+a:focus {
+    color: lemonchiffon;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ccc
 }
