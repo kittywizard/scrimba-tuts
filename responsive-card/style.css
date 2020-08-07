@@ -31,10 +31,10 @@ p {
     color: #FFE600;
 }
 
-a, a:visited {
+a {
     text-decoration: underline;
     color: #FFE600;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 /* important for accessbility, and people who tab through pages */ 
@@ -44,5 +44,21 @@ a:focus {
 
 a:hover {
     text-decoration: none;
-    color: #ccc
+    color: white;
+}
+
+.button {
+    background: #FFE600;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-right: 20px;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+/* you can :hover on anything! */
+.button:hover {
+    background: white;
+    color: black;
 }
