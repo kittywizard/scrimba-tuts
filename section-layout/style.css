@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: sans-serif;
 }
 
 h1, h2, p {
@@ -16,7 +17,9 @@ p {
 
 a {
     color: #FFE600;
+    font-weight: bold;
 }
+
 header, section {
     padding: 50px;
 }
@@ -26,5 +29,27 @@ header {
     color: #000;
 }
 
-section {
+.section-one {
+    background-color: #000;
+    color: white;
+}
+
+.section-two a {
+    color: black;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #FFE600;
+    text-decoration: none;
+}
+
+.section-one .btn {
+    color: black;
+}
+
+.section-one .btn:hover, .section-two .btn:hover  {
+    background-color: lemonchiffon;
+    color: black;
 }
