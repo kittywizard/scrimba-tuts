@@ -1,0 +1,56 @@
+body {
+    font-family: 'Catamaran', sans-serif;
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 650px;
+    text-align: center;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+h1 {
+    margin: 45px 0;
+    color: #fff;
+    background-color: #0080c0;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-weight: 800;
+    color: #0080c0;
+}
+
+p {
+    line-height: 23px;
+}
+
+a {
+    font-weight: 800;
+    color: #06b957;
+}
+
+a:hover {
+    color: #0080c0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #06b957;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #0080c0
+}
