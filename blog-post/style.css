@@ -1,0 +1,34 @@
+body{ 
+    font-family: 'Lato', sans-serif;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+    margin: 20px 0; /* shortcut is clockwise, fool */
+}
+
+.main {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.title {
+    font-size: 30px;   
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+.meta {
+    font-size: 12px;
+    
+}
+
+.post {
+    line-height: 25px;
+}
+
+.author, .date {
+    font-weight: 900;
+    color: #ef5839;
+}
