@@ -21,7 +21,6 @@ img {
 
 .meta {
     font-size: 12px;
-    
 }
 
 .post {
@@ -31,4 +30,5 @@ img {
 .author, .date {
     font-weight: 900;
     color: #ef5839;
+    font-size: 14px;
 }
