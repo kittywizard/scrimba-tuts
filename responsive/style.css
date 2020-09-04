@@ -1,0 +1,20 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    background-color: #2E354F;
+    font-size: 20px;
+   
+}
+
+.container {
+    width: 90%;
+    max-width: 620px; 
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px;
+}
+
+ul {
+    font-size: 1.5em; /* 1 em = parent font size, 1.5em = 150% */
+    /* rems are root - so it always pulls from the html, but shouldn't set a default size */
+}
