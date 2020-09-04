@@ -8,6 +8,10 @@
     max-width: 600px;
 }
 
+.hidden {
+    display: none;
+}
+
 .visible {
     display: block;
 }
