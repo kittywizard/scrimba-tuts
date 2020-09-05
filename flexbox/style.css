@@ -20,6 +20,8 @@ h1 span {
 
 .columns {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 0.5em 0;
     margin: 1em 0;
 }
@@ -54,15 +56,16 @@ p {
 
 /* baby's first grid */
 /* this was built as a 4 column layout. so each column is 25% width */
+/* taking 5% off of each for spacing purposes. doing this instead of messing with margins */
 
 .col-1 {
-    width: 25%;
+    width: 20%;
 }
 
 .col-2 {
-    width: 50%;
+    width: 45%;
 }
 
 .col-3 {
-    width: 75%;
+    width: 70%;
 }
