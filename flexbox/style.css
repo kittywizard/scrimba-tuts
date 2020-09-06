@@ -4,19 +4,6 @@ body {
     background: #fff;
 }
 
-/* this will effect anything with a minimum width of 600px ***and larger*** */
-/* and max width will put it into a range */
-
-@media (min-width: 600px) and (max-width: 980px) {
-    body {
-        background: #dfdfdf;
-    }
-
-    .container {
-        background: #fff;
-    }
-
-}
 img {
     max-width: 100%;
 }
@@ -38,6 +25,14 @@ h1 span {
     align-items: flex-start;
     padding: 0.5em 0;
     margin: 1em 0;
+}
+
+/* changing flex direction for smaller screens */ 
+
+@media (max-width: 600px) {
+    .columns {
+        flex-direction: column;
+    }
 }
 
 .col {
@@ -82,4 +77,15 @@ p {
 
 .col-3 {
     width: 70%;
+}
+
+/* fixing the grid */ 
+/* this has to come after the default selector */
+
+@media (max-width: 600px) {
+
+    .col
+     {
+        width: 100%;
+    }
 }
