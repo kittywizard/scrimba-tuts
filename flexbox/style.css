@@ -1,8 +1,22 @@
 body {
     font-family: 'Lato', Arial, Helvetica, sans-serif;
     font-size: 1.125rem;
+    background: #fff;
 }
 
+/* this will effect anything with a minimum width of 600px ***and larger*** */
+/* and max width will put it into a range */
+
+@media (min-width: 600px) and (max-width: 980px) {
+    body {
+        background: #dfdfdf;
+    }
+
+    .container {
+        background: #fff;
+    }
+
+}
 img {
     max-width: 100%;
 }
