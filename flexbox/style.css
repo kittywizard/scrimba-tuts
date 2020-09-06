@@ -8,10 +8,6 @@ img {
     max-width: 100%;
 }
 
-h1 span {
-    color: #B7832F;
-}
-
 .container {
     width: 80%;
     max-width: 980px;
@@ -27,14 +23,6 @@ h1 span {
     margin: 1em 0;
 }
 
-/* changing flex direction for smaller screens */ 
-
-@media (max-width: 600px) {
-    .columns {
-        flex-direction: column;
-    }
-}
-
 .col {
     padding: 0.5em;
 }
@@ -43,23 +31,6 @@ h1 span {
     background-color: #312614;
     color: #fff;
     padding: 1em;
-}
-
-/* typography */
-
-h1 {
-    text-align: center;
-    font-size: 3rem;
-    color: #312614;
-}
-
-h2 {
-    font-size: 1.5rem;
-    margin-top: 0;
-}
-
-p {
-    margin-top: 0;
 }
 
 
@@ -79,13 +50,41 @@ p {
     width: 70%;
 }
 
+/* typography */
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #312614;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+h1 span {
+    color: #B7832F;
+}
+
+
 /* fixing the grid */ 
 /* this has to come after the default selector */
 
 @media (max-width: 600px) {
-
-    .col
-     {
-        width: 100%;
+    .columns {
+        flex-direction: column;
     }
+
+    .col-1,
+    .col-2,
+    .col-3
+
+         {
+            width: 100%;
+        }
 }
