@@ -1,0 +1,41 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+    background: #F8F8F8;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.7em;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: 'Lora', serif;
+    font-size: 3rem;
+    color: #143774;
+    text-transform: initial;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    color: #1792D2;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+
+}
+
+nav a {
+    color: #707070;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+}
