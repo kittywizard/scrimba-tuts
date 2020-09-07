@@ -86,7 +86,11 @@ nav a:focus {
         text-align: center;
     }
 
+    nav ul {
+        flex-direction: column;
+    }
+
     nav li {
-    margin: 0 1em;
-}
+    margin:  0.75em;
+    }
 }
