@@ -35,22 +35,56 @@ body {
 	Write your solution here!
    ========================== */
 
-   body {
+   .posts {
        display: flex;
-       flex-flow: column wrap;
-        justify-content: center;
+	   flex-flow: column wrap;
+	   align-items: center;
+	   justify-content: space-between;
+	   width: 50%;
+	   margin: 0 auto;
    }
 
    .post {
-       width: 50%;
        margin: 2em auto;
        padding: 1em;
        border-radius: 2em;
-       text-align: center;
+	   text-align: center;
+	   width: 40%;
+	   display: flex;
+	   flex-direction: column;
+	   align-items: center;
    }
 
    img {
        width: 100%;
-       object-fit: cover;
+	   object-fit: cover;
+	   order: 3;
+   }
+
+   .post-description {
+	   order: 1;
+   }
+
+   .header {
+	   order: 0;
+   }
+
+   @media (min-width: 675px) {
+	   .posts {
+		   flex-flow: row wrap;
+		   justify-content: space-between;
+	   }
+
+	   .post-description {
+		order: 3;
+	}
+ 
+	.header {
+		order: 1;
+	}
+
+	img {
+		order: 2
+	}
    }
 
