@@ -21,4 +21,56 @@ Your main goal is to take the given raw HTML and turn it into a fully functionin
  - Link font: Ubuntu
  - Link text color: #717171
  */
- 
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    margin: 0; 
+} 
+
+ .nav {
+     background: #F8F8F8;
+     display: flex;
+     flex-flow: row wrap;
+     align-items: center;
+     justify-content: space-between;
+
+ }
+
+ /* typography */
+
+ .title {
+     font-family: 'Lora', serif;
+     color: #143774;
+     font-size: 2rem;
+     padding: 0.5em;
+ }
+
+ .link {
+     text-decoration: none;
+     color: #717171;
+     font-weight: 700;
+     text-transform: uppercase;
+     font-size: 1rem;
+     padding: 0.5em;
+ }
+
+ .link:hover, .link:focus {
+     color: #143774;
+ }
+
+ .active {
+    text-decoration: underline;
+}
+
+@media (max-width: 675px) {
+    .nav {
+        flex-flow: column wrap;
+    }
+    
+    .links {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+}
