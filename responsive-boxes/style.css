@@ -1,0 +1,28 @@
+.container {
+    max-width: 900px;
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
+
+
+.row {
+    flex-direction: column;
+    padding: 2em;
+    justify-content: space-between;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    padding: 1em;
+}
+
+@media (min-width: 675px) {
+    .row {
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+    }
+
+}
