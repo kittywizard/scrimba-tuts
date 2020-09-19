@@ -7,22 +7,26 @@
 
 
 .row {
-    flex-direction: column;
+    flex-flow: column wrap;
     padding: 2em;
     justify-content: space-between;
 }
 
 img {
-    width: 100%;
+    width: 90%;
     object-fit: cover;
     padding: 1em;
 }
 
 @media (min-width: 675px) {
     .row {
-            flex-direction: row;
-            justify-content: center;
-            flex-wrap: wrap;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    img {
+        width: 50%;
+        margin: 1em;
     }
 
 }
