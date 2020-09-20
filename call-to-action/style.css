@@ -34,3 +34,29 @@ Your main goal is to structure the given call-to-action section so that everythi
  - Responsive Typography
  
  */
+
+ body {
+	 display: flex;
+	 flex-direction: column;
+	 height: 100vh; /* this, combined with flexbox (i think) centers vertically */
+	 justify-content: center;
+	 align-items: center;
+	 width: 80%;
+	 margin: 0 auto;
+	 text-align: center;
+ }
+
+ .title {
+	 font-size: 3rem;
+	 margin: 1em;
+ }
+
+ .text {
+	 font-size: 1.5rem;
+	 margin: 0 1em 1.5em 1em;
+ }
+
+.btn {
+
+	font-size: 1rem;
+}
