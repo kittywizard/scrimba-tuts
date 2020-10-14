@@ -18,14 +18,20 @@ CSS pseudo selectors (:active, :hover), transform
 
 body {
     margin: 0;
-    background: #ac8d0b;
+    background: rgb(248, 248, 248);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
 }
 
 form {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 h3 {
-    color: green;
+    color: rgb(188, 154, 207);
     margin-top: 20px;
     margin-bottom: 0;
 }
@@ -37,9 +43,12 @@ input {
 
 button {
     display: block;
-    border-radius: 2px;
-    background: #3d492b;
-    font-size: 15px;
+    border-radius: 12px;
+    border: 0;
+    padding: 0.5em;
+    background: #ccc;
+    font-size: 1rem;
+    font-family: 'Sansita Swashed', sans-serif;
 }
 
 button:hover {
