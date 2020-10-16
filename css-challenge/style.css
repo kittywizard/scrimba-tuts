@@ -49,6 +49,11 @@ h3 {
     text-align: center;
 }
 
+.submitText {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
 input, button {
     font-family: 'Montserrat', sans-serif;
     border-radius: 5px;

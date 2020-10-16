@@ -12,13 +12,27 @@ const form = document.getElementById("myForm");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector('.overlay');
 const closeModal = document.getElementById('closeModal');
+const headline = document.querySelector(".appendMe");
+let emailDisplay;
 
 form.addEventListener("submit", function(e) {
     e.preventDefault()
     overlay.style.display = "block";
-    let emailDisplay = document.createElement("p");
+    emailDisplay = document.createElement("p");
     emailDisplay.textContent = `${email.value} is now subscribed to the newsletter!`;
-    overlay.appendChild(emailDisplay);
+    emailDisplay.classList.add("submitText", "desc");
+    headline.appendChild(emailDisplay);
+    form.reset();
 });
 
-closeModal.addEventListener("click", () => overlay.style.display = "none");
+closeModal.addEventListener("click", () => {
+    
+    overlay.style.display = "none";
+    resetText(emailDisplay);
+});
+
+//refresh the page? 
+//need to at least clear the code? 
+function resetText(emailDisplay) {
+    emailDisplay.textContent = '';
+}
