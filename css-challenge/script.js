@@ -11,25 +11,14 @@ const email = document.getElementById("email-input");
 const form = document.getElementById("myForm");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector('.overlay');
+const closeModal = document.getElementById('closeModal');
 
 form.addEventListener("submit", function(e) {
     e.preventDefault()
-    console.log("email: ", email.value);
-    // need to display the modal 
     overlay.style.display = "block";
-    modal.classList.toggle('hidden');
-
-    //need to add background over everything else
+    let emailDisplay = document.createElement("p");
+    emailDisplay.textContent = `${email.value} is now subscribed to the newsletter!`;
+    overlay.appendChild(emailDisplay);
 });
 
-//open modal
-// form
-// openModal.addEventListener('click', function() {
-//     overlay.style.display = "block";
-// });
-
-//close modal
-// const closeModal = document.getElementById('close-modal');
-// closeModal.addEventListener('click', function(){
-//     overlay.style.display = "none";
-// });
+closeModal.addEventListener("click", () => overlay.style.display = "none");
