@@ -22,22 +22,10 @@ const button3 = document.getElementById("button-three");
 const logo = document.querySelector(".logo");
 const text = document.getElementById("text");
 
-button1.addEventListener("click", changeText);
-button2.addEventListener("click", changeLogo);
-button3.addEventListener("click", addShadow);
+button1.addEventListener("click", () => {text.style.color = "black"});
+button2.addEventListener("click", () => {logo.style.background = "red"});
+button3.addEventListener("click", () => {logo.style.boxShadow = "5px 5px 5px #ccc"});
 
-function changeText() {
-
-}
-
-function changeLogo() {
-
-
-}
-
-function addShadow() {
-    
-}
 /*
 
 DETAILED INSTRUCTIONS
