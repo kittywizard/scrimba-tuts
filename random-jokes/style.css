@@ -1,0 +1,22 @@
+body {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+#getNewJoke{
+    display: none;
+}
+
+button {
+    border: unset;
+    font-weight: 600;
+    padding: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.container {
+
+    width: 85%;
+    margin: 0 auto;
+}
