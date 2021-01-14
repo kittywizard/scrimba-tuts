@@ -3,9 +3,7 @@ body {
     font-weight: 400;
     text-align: center;
 }
-#getNewJoke{
-    display: none;
-}
+
 
 button {
     border: unset;
@@ -23,4 +21,12 @@ button {
 
 h3 {
     font-size: 2rem;
+}
+
+.punchlineDisplay {
+    margin: 2em;
+}
+
+.hidden {
+    display:none;
 }
