@@ -8,19 +8,40 @@ section {
 
 .card {
     background-color: #111D4A;
-
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
 }
 
-.img {
+.info {
+    padding: 2rem;
+}
 
+.section-footer, .reading-time {
+    display: flex;
+}
+.section-footer {
+    justify-content: space-between;
+}
+
+.reading-time {
+    flex-direction: column;
+}
+
+.card-img {
+    flex-shrink: 2;
 }
 
 /* typography */
-.headline {
+
+.headline, .time, .btn {
     font-family: "Blinker", sans-serif;
     font-weight: 700;
+}
+
+.headline {
     color: #05cbe9;
     font-size: 3rem;
 }
@@ -29,9 +50,31 @@ section {
     font-size: 1.5rem;
 }
 
-@media (min-width: 500px) {
+.reading-time  {
+    color: #999;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.time {
+    font-size: 2.5rem;
+}
+
+.btn {
+    font-family: "Blinker", sans-serif;
+    font-weight: 700;
+    color: #111d4a;
+    font-size: 2rem;
+    padding: 0.5em 2em;
+    background-color: #05cbe9;
+    border: unset;
+
+}
+
+@media (max-width: 500px) {
     /* add in desktop changes here! */
     .card {
+        display: flex;
         flex-direction: column;
     }
 }
