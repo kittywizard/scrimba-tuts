@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@400;700&family=Source+Sans+Pro:wght@300&display=swap');
+
+section {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    color: #FFF;
+}
+
+.card {
+    background-color: #111D4A;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.img {
+
+}
+
+/* typography */
+.headline {
+    font-family: "Blinker", sans-serif;
+    font-weight: 700;
+    color: #05cbe9;
+    font-size: 3rem;
+}
+
+.subhead {
+    font-size: 1.5rem;
+}
+
+@media (min-width: 500px) {
+    /* add in desktop changes here! */
+    .card {
+        flex-direction: column;
+    }
+}
