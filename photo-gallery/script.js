@@ -2,6 +2,7 @@ let url = "http://placekitten.com/300/300?image=";
 //let kittenID = 0;
 const container = document.querySelector(".container");
 const chosenOnes = document.querySelector(".chosen-kittens");
+const newKittens = document.querySelector(".new-kittens");
 chosenOnes.style.display = "none";
 
 const addKittens = document.getElementById("addKittens");
@@ -27,6 +28,8 @@ function displayKittens() {
 displayKittens();
 let kittens = document.querySelectorAll(".kitten");
 
+//need to have a check if a kitten gets unselected before adding
+
 kittens.forEach(kitten => {
     kitten.addEventListener('click', () => {
         kitten.classList.toggle("selected");
@@ -39,9 +42,15 @@ addKittens.addEventListener('click', () => selectKittens(kittenArray));
 
 
 function selectKittens(arr) {
+    console.log(arr);
     arr.forEach(kitten => {
-        //add to favorite kitten section
-        console.log(kitten)
-        //remove from other kitten section
+
+        let img = document.createElement("img");
+        img.classList.add("kitten");
+        img.src = url + kitten;
+        newKittens.appendChild(img);
+        
+        const removeKittens = document.querySelectorAll(".selected");
+        removeKittens.forEach(kitten => kitten.style.display = "none");
     });
 }
