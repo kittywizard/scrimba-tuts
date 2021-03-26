@@ -1,0 +1,12 @@
+.grid {
+    display: grid;
+}
+
+.square {
+    height: 200px;
+    width:200px;
+}
+
+.one {
+    background: rgb(145, 20, 150);
+}
