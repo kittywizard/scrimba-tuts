@@ -1,12 +1,27 @@
 .grid {
     display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
 }
 
-.square {
-    height: 200px;
-    width:200px;
+header {
+    background: darkgrey;
+    grid-area: header;
 }
 
-.one {
-    background: rgb(145, 20, 150);
+footer {
+    background: lightcyan;
+    grid-area: footer;
+}
+
+.sidebar {
+    background: lightpink;
+}
+
+main {
+    background: lightsteelblue;
 }
