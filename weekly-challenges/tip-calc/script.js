@@ -1,5 +1,6 @@
 
 const form = document.getElementById('tipCalc');
+const results = document.querySelector('.results');
 // const tip15 = document.getElementById('15percent');
 // const tip18 = document.getElementById('18percent');
 // const tip20 = document.getElementById('20percent');
@@ -26,7 +27,6 @@ form.addEventListener('submit', e => {
     //check to see which tip id has the class of selected, if none do, then grab the custom amount
     //if no custom amount, throw an error
 
-    
     getData(check, tip);
     e.preventDefault();
 });
@@ -37,11 +37,30 @@ function getData(check, tip) {
     //need to tell JS that check is a number??
     let tipPercent = tip / 100; //to get the decimal
 
-    let tipFinal = check * tipPercent;
+    let tipFinal = (Number(check) * tipPercent).toFixed(2);
+    tipFinal = Number(tipFinal);
     console.log(`Amount of Tip: $${tipFinal}`);
 
-    let totalBill = check + tipFinal;
-    console.log(`Total Bill Amount: ${totalBill}`)
+    let totalBill = Number(check) + tipFinal;
+    totalBill = Number(totalBill);
+    console.log(`Total Bill Amount: ${totalBill}`);
+
+    let checkDisplay = document.createElement('span');
+    checkDisplay.classList.add('result-display');
+    checkDisplay.textContent = `Check: ${check}`;
+
+    let tipDisplay = document.createElement('span');
+    tipDisplay.classList.add('result-display');
+    tipDisplay.textContent = `Tip Amount: ${tipFinal}`;
+
+
+    let totalDisplay = document.createElement('span');
+    totalDisplay.classList.add('result-display');
+    totalDisplay.textContent = `Total: ${totalBill}`;
+
+    results.appendChild(checkDisplay);
+    results.appendChild(tipDisplay);
+    results.appendChild(totalDisplay)
     
 }
 
