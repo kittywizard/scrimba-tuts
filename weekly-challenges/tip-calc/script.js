@@ -42,26 +42,34 @@ function getData(check, tip) {
     console.log(`Amount of Tip: $${tipFinal}`);
 
     let totalBill = Number(check) + tipFinal;
-    totalBill = Number(totalBill);
+    totalBill = Number(totalBill).toFixed(2);
     console.log(`Total Bill Amount: ${totalBill}`);
-
-    let checkDisplay = document.createElement('span');
-    checkDisplay.classList.add('result-display');
-    checkDisplay.textContent = `Check: ${check}`;
-
-    let tipDisplay = document.createElement('span');
-    tipDisplay.classList.add('result-display');
-    tipDisplay.textContent = `Tip Amount: ${tipFinal}`;
+    console.log(typeof check);
 
 
-    let totalDisplay = document.createElement('span');
-    totalDisplay.classList.add('result-display');
-    totalDisplay.textContent = `Total: ${totalBill}`;
+    // let checkDisplay = document.createElement('span');
+    // checkDisplay.classList.add('result-display');
+    // checkDisplay.textContent = `Check: ${check}`;
 
-    results.appendChild(checkDisplay);
-    results.appendChild(tipDisplay);
-    results.appendChild(totalDisplay)
-    
+    // let tipDisplay = document.createElement('span');
+    // tipDisplay.classList.add('result-display');
+    // tipDisplay.textContent = `Tip Amount: ${tipFinal}`;
+
+
+    // let totalDisplay = document.createElement('span');
+    // totalDisplay.classList.add('result-display');
+    // totalDisplay.textContent = `Total: ${totalBill}`;
+
+    // results.appendChild(checkDisplay);
+    // results.appendChild(tipDisplay);
+    // results.appendChild(totalDisplay);
+    results.classList.toggle('hide');
+    results.innerHTML = `
+                        <strong>Check Amount:</strong> ${check}
+                        <br>
+                        <strong>Tip Amount:</strong> ${tipFinal}
+                        <hr>
+                        <strong>Total:</strong> ${totalBill}        `;
 }
 
 function setTipAmount(tip, btn) {
