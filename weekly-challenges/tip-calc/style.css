@@ -27,7 +27,27 @@ body {
     margin: 1em;
 }
 
+hr {
+    border: 1px solid coral;
+    margin: 1em 0;
+}
 
+.btn {
+    border: none;
+    background: white;
+    border-radius: 25px;
+    padding: 1em;
+    margin: 1em;
+}
+
+.btn:hover,
+.btn:focus {
+    background: #999;
+}
+
+.selected {
+    background:deeppink;
+}
 
 /* #tipCalc {
     display: flex;

@@ -1,31 +1,30 @@
 
 const form = document.getElementById('tipCalc');
 const results = document.querySelector('.results');
-// const tip15 = document.getElementById('15percent');
-// const tip18 = document.getElementById('18percent');
-// const tip20 = document.getElementById('20percent');
+const tip15 = document.getElementById('15percent');
+const tip18 = document.getElementById('18percent');
+const tip20 = document.getElementById('20percent');
 
-// tip15.addEventListener('click', () => {
-//     setTipAmount(15, tip15);
-// });
+tip15.addEventListener('click', () => {
+    tip15.classList.add('selected');
+    //need to deactivate other buttons
+});
 
-// tip18.addEventListener('click', () => {
-//     setTipAmount(18, tip18);
-// });
+tip18.addEventListener('click', () => {
+    tip18.classList.add('selected');
+});
 
-// tip20.addEventListener('click', () => {
-//     setTipAmount(20, tip20);
-// });
+tip20.addEventListener('click', () => {
+    tip20.classList.add('selected');
+});
 
 form.addEventListener('submit', e => {
     let newData = new FormData(e.target);
     let check = newData.get('checkAmount');
 
-    //need to check for if a button was clicked or a custom tip amount
+    //check for if a button is selected
     let tip = newData.get('tipAmount');
     
-    //check to see which tip id has the class of selected, if none do, then grab the custom amount
-    //if no custom amount, throw an error
 
     getData(check, tip);
     e.preventDefault();
@@ -34,17 +33,31 @@ form.addEventListener('submit', e => {
 
 function getData(check, tip) {
 
-    //need to tell JS that check is a number??
     let tipPercent = tip / 100; //to get the decimal
 
     let tipFinal = (Number(check) * tipPercent).toFixed(2);
-    tipFinal = Number(tipFinal);
+    tipFinal = Number(tipFinal).toFixed(2);
     console.log(`Amount of Tip: $${tipFinal}`);
 
-    let totalBill = Number(check) + tipFinal;
+    let totalBill = Number(check) + Number(tipFinal);
     totalBill = Number(totalBill).toFixed(2);
+    check = Number(check).toFixed(2);
+
     console.log(`Total Bill Amount: ${totalBill}`);
-    console.log(typeof check);
+
+    results.classList.toggle('hide');
+    results.innerHTML = `
+                        <strong>Check Amount:</strong> $${check}
+                        <br>
+                        <strong>Tip Amount:</strong> $${tipFinal}
+                        <hr>
+                        <strong>Total:</strong> $${totalBill}`;
+}
+
+function setTipAmount(tip, btn) {
+    btn.classList.add('selected');
+    //deselect other buttons - remove eventlisteners
+
 
 
     // let checkDisplay = document.createElement('span');
@@ -63,22 +76,6 @@ function getData(check, tip) {
     // results.appendChild(checkDisplay);
     // results.appendChild(tipDisplay);
     // results.appendChild(totalDisplay);
-    results.classList.toggle('hide');
-    results.innerHTML = `
-                        <strong>Check Amount:</strong> ${check}
-                        <br>
-                        <strong>Tip Amount:</strong> ${tipFinal}
-                        <hr>
-                        <strong>Total:</strong> ${totalBill}        `;
-}
-
-function setTipAmount(tip, btn) {
-    btn.classList.add('selected');
-    //deselect other buttons - remove eventlisteners
-    btn.removeEventListener('click', () => {
-        setTipAmount(tip, btn);
-    });
-    console.log(tip);
 }
 
 //need to activate the function with any button click - but need to make sure that the check amount has been filled in 
