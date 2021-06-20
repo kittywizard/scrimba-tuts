@@ -5,25 +5,29 @@ const tip15 = document.getElementById('15percent');
 const tip18 = document.getElementById('18percent');
 const tip20 = document.getElementById('20percent');
 
-tip15.addEventListener('click', () => {
-    tip15.classList.add('selected');
-    //need to deactivate other buttons
-});
+// tip15.addEventListener('click', () => {
+//     tip15.classList.add('selected');
+//     //need to deactivate other buttons
+// });
 
-tip18.addEventListener('click', () => {
-    tip18.classList.add('selected');
-});
+// tip18.addEventListener('click', () => {
+//     tip18.classList.add('selected');
+// });
 
-tip20.addEventListener('click', () => {
-    tip20.classList.add('selected');
-});
+// tip20.addEventListener('click', () => {
+//     tip20.classList.add('selected');
+// });
 
 form.addEventListener('submit', e => {
     let newData = new FormData(e.target);
     let check = newData.get('checkAmount');
 
     //check for if a button is selected
+
     let tip = newData.get('tipAmount');
+    console.log(tip)
+    //let tip = newData.get('customTip');
+    
     
 
     getData(check, tip);
@@ -79,3 +83,5 @@ function setTipAmount(tip, btn) {
 }
 
 //need to activate the function with any button click - but need to make sure that the check amount has been filled in 
+
+//
