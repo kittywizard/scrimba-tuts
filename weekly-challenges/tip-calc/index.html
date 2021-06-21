@@ -20,8 +20,13 @@
                 <label for="tip18">18%</label>
                 <input type="radio" name="tipAmount" id="tip20" value="20">
                 <label for="tip20">20%</label>
-            <label for="tipAmount">Tip %:</label>
-            <input type="number" name="customTip" placeholder="Custom Tip %" min="1">
+
+                <input type="radio" name="tipAmount" id="custom-tip" value="0">
+                <label for="custom-tip">Custom</label>
+                <div class="hide custom">
+                    <label for="customAmount">Tip %:</label>
+                    <input type="number" name="customTip" placeholder="Custom Tip %" min="1" id="customAmount">
+                </div>
             <button class="btn" id="submitBtn">Submit</button>
         </form>
         <!-- <button class="btn" id="15percent">15%</button>
