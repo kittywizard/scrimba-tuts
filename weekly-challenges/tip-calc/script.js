@@ -2,6 +2,7 @@
 const form = document.getElementById('tipCalc');
 const results = document.querySelector('.results');
 const customDiv = document.querySelector(".custom");
+const resetBtn = document.getElementById('resetBtn');
 
 const customTip = document.getElementById('custom-tip');
 customTip.addEventListener('click', () => {
@@ -9,20 +10,21 @@ customTip.addEventListener('click', () => {
     customDiv.classList.toggle('hide');
 });
 
+resetBtn.addEventListener('click', () => location.reload());
+
 form.addEventListener('submit', e => {
     let newData = new FormData(e.target);
     let check = newData.get('checkAmount');
     let tip = newData.get('tipAmount');
-    console.log('tipAmount is currently set to ' + tip)
-    console.log(typeof tip)
+    tip = Number(tip);
 
-    if(Number(tip) === 0) {
-        tip = newData.get('customTip');
-        console.log(newData.get(customTip));
-        //getData(check, tip);
+    if(tip === 0) {
+        let newTip = newData.get('customTip');
+        console.log(newTip);
+        getData(check, newTip);
     } else {
         console.log(tip);
-        //getData(check, tip);
+        getData(check, tip);
     }
 
     e.preventDefault();
@@ -50,4 +52,6 @@ function getData(check, tip) {
                         <strong>Tip Amount:</strong> $${tipFinal}
                         <hr>
                         <strong>Total:</strong> $${totalBill}`;
+
+    resetBtn.classList.toggle('hide');
 }
