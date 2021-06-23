@@ -35,6 +35,10 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+form {
+
+}
+
 .result-display {
     padding: .5em;
 }
@@ -59,9 +63,7 @@ hr {
     background-color: rgb(174, 209, 103);
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-    letter-spacing: .75px;
     font-size: 1em;
-
 }
 
 .btn:hover,
@@ -69,13 +71,37 @@ hr {
     background: rgb(238, 204, 92);
 }
 
-input[type="number"] {
+input {
     border: none;
     padding: 1em;
     background:rgb(174, 209, 103);
     border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
 }
-/* 
-input[type="radio"] {
 
-} */
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+input[type="radio"]:before {
+    
+   content: '';
+   background-color: rgb(174, 209, 103);
+   border-radius: 100%;
+   display: inline-block;
+   width: 1.4em;
+   height: 1.4em;
+   position: relative;
+   top: -0.2em;
+   cursor: pointer;
+   border: 1px solid black;
+   margin-right: 1em;
+
+}
+
+input[type="radio"]:checked {
+    background-color: black;
+}
