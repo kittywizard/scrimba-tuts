@@ -54,11 +54,11 @@ function getData(check, tip) {
                         <hr>
                         <strong>Total:</strong> $${totalBill}`;
 
-    //displayResults(check, tipFinal, totalBill);
+    //displayResults(check, tipFinal, totalBill, results);
 
 }
 
-function displayResults(check, tip, total) {
+function displayResults(check, tip, total, resultDiv) {
     let checkDisplay = document.createElement('div');
     let tipDisplay = document.createElement('div');
     let totalDisplay = document.createElement('div');
@@ -67,7 +67,10 @@ function displayResults(check, tip, total) {
     tipDisplay.textContent = `Tip Amount: ${tip}`;
     totalDisplay.textContent = `Total: ${total}`;
 
-    
+    checkDisplay.appendChild(tipDisplay);
+
+    resultDiv.appendChild(checkDisplay);
+    resultDiv.appendChild(totalDisplay);
 
 
 }
