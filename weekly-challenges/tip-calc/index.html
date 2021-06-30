@@ -18,8 +18,12 @@
             <label for="checkAmount">Check Amount:</label>
             <input aria-label="check amount" name="checkAmount" type="number" placeholder="$0.00" step="0.01"
                 min="1" required>
-            <input type="radio" name="tipAmount" id="tip15" value="15">
-            <label for="tip15">15%</label>
+            <label for="tip15" class="label-container">
+                <input type="radio" name="tipAmount" id="tip15" value="15">
+                <span class="checkmark"></span>
+                15%
+            </label>
+            
             <input type="radio" name="tipAmount" id="tip18" value="18">
             <label for="tip18">18%</label>
             <input type="radio" name="tipAmount" id="tip20" value="20">
