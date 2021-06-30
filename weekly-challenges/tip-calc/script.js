@@ -46,6 +46,7 @@ function getData(check, tip) {
     console.log(`Total Bill Amount: ${totalBill}`);
 
     results.classList.toggle('hide');
+    resetBtn.classList.toggle('hide');
     results.innerHTML = `
                         <strong>Check Amount:</strong> $${check}
                         <br>
@@ -53,5 +54,20 @@ function getData(check, tip) {
                         <hr>
                         <strong>Total:</strong> $${totalBill}`;
 
-    resetBtn.classList.toggle('hide');
+    //displayResults(check, tipFinal, totalBill);
+
+}
+
+function displayResults(check, tip, total) {
+    let checkDisplay = document.createElement('div');
+    let tipDisplay = document.createElement('div');
+    let totalDisplay = document.createElement('div');
+
+    checkDisplay.textContent = `Check Amount: ${check}`;
+    tipDisplay.textContent = `Tip Amount: ${tip}`;
+    totalDisplay.textContent = `Total: ${total}`;
+
+    
+
+
 }

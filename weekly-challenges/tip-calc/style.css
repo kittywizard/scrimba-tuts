@@ -1,5 +1,6 @@
 :root {
-    --bg-color: coral;
+    --bg-color: rgb(223,255,249);
+    --accent-color: rgb(3, 175, 144);
     --font-color: #000;
 }
 
@@ -8,7 +9,7 @@ body {
     display: grid;
     min-height: 100vh;
     place-items: center;
-    background: rgb(223,255,249);
+    background: var(--bg-color);
     background: radial-gradient(circle, rgba(223,255,249,1) 5%, rgba(231,247,200,1) 51%, rgba(249,234,188,1) 91%);
     /* background: rgb(223,255,249);
     background: radial-gradient(circle, rgba(223,255,249,1) 5%, rgba(160,251,232,1) 51%, rgba(103,241,201,1) 91%); */
@@ -35,9 +36,6 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-form {
-
-}
 
 .result-display {
     padding: .5em;
@@ -55,6 +53,8 @@ hr {
     margin: 1em 0;
 }
 
+/* buttons */
+
 .btn {
     border: none;
     padding: 1em;
@@ -68,8 +68,11 @@ hr {
 
 .btn:hover,
 .btn:focus {
-    background: rgb(238, 204, 92);
+    background: var(--accent-color);
+    color: #fff;
 }
+
+/* form styling */
 
 input {
     border: none;
@@ -80,12 +83,17 @@ input {
     font-weight: 700;
 }
 
+/* ------ 
+HERE BEGINS CUSTOM RADIO BUTTONS
+------- */
 
+/* hides original radio buttons */
 .label-container input {
     position: absolute;
     opacity: 0;
 }
 
+/* span that creates custom button */
 .checkmark {
    content: '';
    background-color: rgb(174, 209, 103);
@@ -99,16 +107,13 @@ input {
    margin-left: 1em;
 }
 
-/* look up what ~ means */
-.label-container:hover input ~ .checkmark {
-    background-color: rgba(103,241,201,1);
-    filter: brightness(0.5);
-
+/* selects all the spans within the label container on hover/click  */
+.label-container:hover input ~ .checkmark,
+.label-container input:checked ~ .checkmark
+ {
+    background-color: var(--accent-color);
 }
 
-.label-container input:checked ~ .checkmark {
-    background-color: rgba(103,241,201,1)
-}
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
@@ -124,10 +129,10 @@ input {
   
   /* Style the indicator (dot/circle) */
   .label-container .checkmark:after {
-    top: 3px;
-    left: 3px;
-    width: 8px;
-    height: 8px;
+    top: 3.5px;
+    left: 3.5px;
+    width: 7.5px;
+    height: 7.5px;
     border-radius: 50%;
     background: white;
   }
