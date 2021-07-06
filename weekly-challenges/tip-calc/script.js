@@ -47,14 +47,8 @@ function getData(check, tip) {
 
     results.classList.toggle('hide');
     resetBtn.classList.toggle('hide');
-    results.innerHTML = `
-                        <strong>Check Amount:</strong> $${check}
-                        <br>
-                        <strong>Tip Amount:</strong> $${tipFinal}
-                        <hr>
-                        <strong>Total:</strong> $${totalBill}`;
 
-    //displayResults(check, tipFinal, totalBill, results);
+    displayResults(check, tipFinal, totalBill, results);
 
 }
 
@@ -63,14 +57,37 @@ function displayResults(check, tip, total, resultDiv) {
     let tipDisplay = document.createElement('div');
     let totalDisplay = document.createElement('div');
 
-    checkDisplay.textContent = `Check Amount: ${check}`;
-    tipDisplay.textContent = `Tip Amount: ${tip}`;
-    totalDisplay.textContent = `Total: ${total}`;
+    let tipTitle = document.createElement('div');
+    tipTitle.classList.add('display-strong');
+    tipTitle.textContent = "Tip Amount: ";
+    
+    let checkTitle = document.createElement('div');
+    checkTitle.classList.add('display-strong');
+    checkTitle.textContent = "Check Amount: ";
 
-    checkDisplay.appendChild(tipDisplay);
+    let totalTitle = document.createElement('div');
+    totalTitle.classList.add('display-strong');
+    totalTitle.textContent = "Total: ";
 
-    resultDiv.appendChild(checkDisplay);
-    resultDiv.appendChild(totalDisplay);
+    let border = document.createElement('div');
+    border.classList.add('border');
+    border.textContent = '';
+
+    checkDisplay.textContent = `$${check}`;
+    tipDisplay.textContent = `$${tip}`;
+    totalDisplay.textContent = `$${total}`;
+
+   
+    resultDiv.append(checkTitle);
+    resultDiv.append(checkDisplay);
+
+    resultDiv.append(tipTitle);
+    resultDiv.append(tipDisplay);
+
+    resultDiv.append(border);
+
+    resultDiv.append(totalTitle);
+    resultDiv.append(totalDisplay);
 
 
 }

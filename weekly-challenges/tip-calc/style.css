@@ -19,6 +19,18 @@ body {
     display: none;
 }
 
+.display-strong {
+    font-weight: 700;
+    margin: 0.5em 0 0 0;
+    color: var(--accent-color);
+   
+}
+
+.border {
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5em;
+}
+
 .container {
     margin: 0 auto;
     width: 50%;
