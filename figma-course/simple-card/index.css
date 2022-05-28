@@ -1,0 +1,59 @@
+body {
+    background-color: #2D2E36;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border-radius: 8px;
+    background-color: #383A45;
+
+    display: flex;
+
+    max-width: 730px;
+    max-height:310px;
+    margin: 0 auto;
+}
+
+.header {
+    font-weight: 400;
+    font-size: 1.875rem;
+}
+
+.copy {
+    padding: 1em;
+}
+
+.paragraph {
+    color: #8D91A6;
+    line-height: 1.5;
+}
+
+.photo {
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 8px;
+    margin: 1.875em;
+}
+
+@media screen and (max-width: 800px) {
+
+    .container {
+        flex-direction: column;
+        max-width: 356px;
+        max-height: 616px;
+    }
+
+    .copy {
+        padding: 0 1.875em 1.875em 1.875em;
+    }
+
+    .photo {
+        max-width: 305px;
+    }
+    
+}
