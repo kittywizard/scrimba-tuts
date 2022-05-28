@@ -17,9 +17,7 @@ html, body {
 .headline {
     font-size: 4rem;
     font-family: "Bebas Neue", sans-serif;
-    font-style: normal;
     text-transform: uppercase;
-    letter-spacing: 0.3rem;
     line-height: 4.5rem;
 }
 
@@ -44,12 +42,8 @@ form {
 .input {
     border: 1px solid #c7c7c7;
     background-color: #EDEDED;
-}
-
-.input, 
-.btn {
     padding: 1.25em 1em;
-    margin: 1em;
+    margin: 1em 0;
 }
 
 label {
@@ -63,6 +57,8 @@ label {
     color: #fff;
     border: unset;
     cursor: pointer;
+    padding: 1.25em 1em;
+    margin: 1em;
 }
 
 @media screen and (min-width: 770px) {
@@ -72,6 +68,11 @@ label {
     }
 
    form {
-       flex-direction: row;
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+   }
+
+   .btn {
+       max-width: 200px;
    }
 }
