@@ -5,7 +5,8 @@
     "babel-core": "^6.0",
     "babel-loader": "^7.0",
     "babel-preset-env": "*",
-    "babel-preset-react": "*"
+    "babel-preset-react": "*",
+    "glob-parent": ">=5.1.2"
   },
   "scripts": {
     "build": "webpack",
