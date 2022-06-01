@@ -35,11 +35,11 @@ body {
 
 .header-logo {
     color: #2D7DFF;
+    text-transform: uppercase;
     font-weight: 800;
     font-size: 1.5rem;
     letter-spacing: -1;
-    flex-grow: 1;
-    text-align: center;
+    padding: 0;
 }
 
 .hamburger-icon,
@@ -47,8 +47,8 @@ body {
     cursor: pointer;
 }
 
-.hamburger-icon,
-.header-logo {
+.hamburger-icon
+{
     padding: 0.2em 1.5em;
 }
 
