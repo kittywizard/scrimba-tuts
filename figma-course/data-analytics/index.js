@@ -1,10 +1,11 @@
 const hamburger = document.getElementById('hamburger');
 const arrow = document.getElementById('arrow');
+const navMenu = document.querySelector('.nav');
 
 hamburger.addEventListener('click', () => {
-    console.log('display side menu;');
+    navMenu.style.transform = 'translateX(0)';
 })
 
 arrow.addEventListener('click', () => {
-    console.log('hide menu')
+    navMenu.style.transform = 'translateX(-1000%)';
 })
