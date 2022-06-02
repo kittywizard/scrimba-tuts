@@ -167,12 +167,14 @@ body {
         justify-content: flex-start;
     }
 
-    .hamburger-icon {
+    .hamburger-icon,
+    .arrow-icon {
         visibility: hidden;
     }
     .nav {
-        transform: translateY(0px);
+        transform: translateY(0px) !important;
         height: calc(100vh - 16px); /* height has to account for margin + box shadow to get rid of the scrollbar */
+        margin-right: 2em;
     }
 
     .headline {
