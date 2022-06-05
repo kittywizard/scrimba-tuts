@@ -1,0 +1,155 @@
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F4F4F4;
+    font-family: 'Lexend Deca', sans-serif;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2em;
+}
+
+/*
+    HEADER
+*/
+
+.headings h1 {
+    font-size: 2rem;
+    margin: 0.1em;
+    color: #000; 
+}
+
+.headings p {
+    font-size: 1.125rem;
+    color: #565656;
+    font-weight: normal;
+    margin: 0;
+    padding: 0.2em;
+}
+
+.options {
+    display: flex;
+    justify-content: baseline;
+    margin: 1.24em 0.5em;
+}
+
+.search {
+    border: unset;
+    padding: 0.8em;
+    position: relative;
+    border-radius: 2em;
+    background: white url('./assets/search.svg') no-repeat right 0.8em center;
+}
+
+.search:focus {
+    outline: thin solid #008AD8;
+}
+
+.menu {
+    margin-left: 0.75em;
+    cursor: pointer;
+}
+
+/* 
+    fILTER
+*/
+.hide {
+    display: none;
+}
+
+.filter {
+    font-size: 1.125rem;
+    color: #000;
+    background-color: #fff;
+    margin: 0.5em;
+    padding: 1em;
+    max-width: 250px;
+    border-radius: 6px;
+    -webkit-box-shadow: 5px 10px 11px -6px rgba(0,0,0,0.48); 
+    box-shadow: 5px 10px 11px -6px rgba(0,0,0,0.48);
+    
+}
+
+.chk-container {
+    padding: 0.5em;
+
+}
+
+.chk-container input {
+    margin: 0.5em 1em 0 0.5em;
+}
+
+/* 
+    MAIN CONTENT
+*/
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+}
+
+.labels {
+    background-color: #008AD8;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.45em 0.75em;
+
+    display: none;
+}
+
+.labels p {
+    font-weight: normal;
+    font-size: 0.75rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* 
+    CAR DETAILS
+*/
+
+.cars {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 1.5em 0.5em;
+}
+
+.car-details {
+
+
+}
+
+.car-name {
+    text-decoration: none;
+    color: #008AD8;
+    font-size: 1.375rem;
+    padding-bottom: 0.5em;
+}
+
+.car-location {
+    color: #565656;
+    font-size: 1.125rem;
+    
+}
+
+/* price and heart icon column */
+.cols-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.car-price {
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: bold;
+    margin: 0;
+}
