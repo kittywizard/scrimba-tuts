@@ -80,8 +80,10 @@ body {
     border-radius: 6px;
     box-shadow: 11px 18px 54px -6px rgba(0,0,0,0.11);
     position: absolute;
-    top: 3em;
-    right: 1em;
+    top: 10em;
+    right: 10em;
+    clip-path: circle(0% at 100% 0%);
+    transition: clip-path .3s ease-in;
 }
 
 .chk-container {
@@ -161,7 +163,33 @@ body {
 }
 
 @media screen and (min-width: 800px) {
-    .labels {
+
+    header {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
+
+    .labels {
+        display: grid;
+        grid-template-columns: 40% 30% 20% auto;
+    }
+
+    .cars {
+        display: grid;
+        grid-template-columns: 40% 30% auto;
+    }
+
+    .far, .fas {
+        margin-right: 1.6em;
+    }
+
+    .icons {
+        margin-bottom: 0;
+    }
+
+    .car-location {
+        margin: 0;
+    }
+
 }
