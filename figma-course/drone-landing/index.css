@@ -3,6 +3,7 @@
     --main-blue-accent: #6889FF;
     --main-green: #B2DD9E;
     --main-dark-blue: #303853;
+    --sidebar-blue: #7988BE;
 }
 
 html,
@@ -13,15 +14,46 @@ body {
 
 .container {
     font-family: "Montserrat", sans-serif;
+    padding: 0 2em; 
+}
+
+/* upper container divs are for the green/purple bg and positioning */
+
+.upper-container {
+    position: relative;
+}
+
+.upper-bg {
+    position: absolute;
+    right: 0;
+    background-color: var(--sidebar-blue);
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+}
+
+.upper-bg-col1 {
+    min-width: 300px;
+    min-height: 700px;
     background-color: var(--main-green);
     background-image: url("./assets/streaks.jpg");
-    background-repeat: no-repeat;
-    background-blend-mode: overlay;
+    background-blend-mode: screen;
+    background-position: center;
+    background-size: cover;
 }
+
+.upper-bg-col2 {
+    min-width: 40px;
+    max-width: 65px;
+    min-height: 700px;
+}
+
+/* header and navigation */
 
 header {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .header-logo {
@@ -35,12 +67,30 @@ header {
     color: var(--main-blue-accent);
 }
 
+.menu {
+    list-style-type: none;
+}
+
+/* style for all that pesky bebas neue */
+
 .headline-font {
     font-family: "Bebas Neue", sans-serif;
 }
 
-h1 {
+.intro {
+    max-height: 700px;
+    text-align: center;
+    padding: 3em 0;
+}
+
+.intro p {
+    line-height: 1.5;
+    font-size: 1.125rem;
+}
+
+.intro h1 {
     font-size: 4rem;
+    line-height: 0.95;
     margin: 0;
 }
 
