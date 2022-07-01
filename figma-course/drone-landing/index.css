@@ -1,4 +1,52 @@
-html, body {
+:root {
+    --main-dark: #000;
+    --main-blue-accent: #6889FF;
+    --main-green: #B2DD9E;
+    --main-dark-blue: #303853;
+}
+
+html,
+body {
     margin: 0;
     padding: 0;
+}
+
+.container {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--main-green);
+    background-image: url("./assets/streaks.jpg");
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-logo {
+    font-size: 2rem;
+    background-color: var(--main-dark);
+    padding: 0.25em;
+    color: #fff;
+}
+
+.header-logo-accent {
+    color: var(--main-blue-accent);
+}
+
+.headline-font {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.quote-section {
+    background-image: url("./assets/stadium.jpg");
+    background: var(--main-dark-blue);
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
 }
