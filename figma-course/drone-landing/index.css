@@ -23,7 +23,6 @@ img {
 
 .container {
     font-family: "Montserrat", sans-serif;
-    padding: 0 2em; 
 }
 
 /* upper container divs are for the green/purple bg and positioning */
@@ -45,19 +44,13 @@ img {
 }
 
 .upper-bg-col1 {
-    min-width: 300px;
-    min-height: 700px;
+
     background-color: var(--main-green);
     background-image: url("./assets/streaks.jpg");
     background-blend-mode: screen;
     background-position: center;
     background-size: cover;
-}
-
-.upper-bg-col2 {
-    min-width: 40px;
-    max-width: 65px;
-    min-height: 700px;
+    height: 100vh;
 }
 
 /* header and navigation */
@@ -66,7 +59,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .header-logo {
@@ -80,7 +72,8 @@ header {
     color: var(--main-blue-accent);
 }
 
-.hamburger {
+.hamburger,
+.menu-close {
     cursor: pointer;
 }
 
@@ -93,12 +86,16 @@ header {
 
 .headline-font {
     font-family: "Bebas Neue", sans-serif;
+    font-weight: normal;
+}
+
+main {
+    height: 75vh;
 }
 
 .intro {
-    max-height: 700px;
     text-align: center;
-    padding: 3em 0;
+    margin: 8em 3em 0;
 }
 
 .intro p {
@@ -112,9 +109,79 @@ header {
     margin: 0;
 }
 
+/* drone image in the main */
+
+.drone-container {
+    width: 65%;
+    position: relative;
+    margin: 5em auto;
+}
+
+.drone {
+    position: absolute;
+    z-index: 1;
+    animation: hover 2s alternate-reverse infinite;
+}
+
+.blur {
+    position: absolute;
+    opacity: .3;
+    top: 1em;
+    animation: pulse 2s alternate-reverse infinite;
+}
+
+@keyframes hover {
+    from {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes pulse {
+    from {
+        opacity: 0;
+    }
+}
+
+/* quote section */
+
 .quote-section {
-    background-image: url("./assets/stadium.jpg");
+    width: 90%;
+    position: relative;
+    padding: 4em 2em;
+    margin-left: auto;
+    height: 75vh;
+
     background: var(--main-dark-blue);
     color: #fff;
     font-family: "Bebas Neue", sans-serif;
+}
+
+.quote-section:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background-image: url("./assets/stadium.jpg");
+    width: 100%;
+    height: 100%;
+    opacity: 17%;
+}
+
+blockquote {
+    font-size: 2rem;
+    margin: 0 0 2em 0;
+}
+
+cite {
+    position: relative;
+    padding-left: 1.25em;
+}
+
+cite:before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    content: '';
+    width: 1em;
+    border-bottom: 1px solid #fff;
 }
