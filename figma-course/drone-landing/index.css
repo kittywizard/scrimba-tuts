@@ -15,6 +15,7 @@ body {
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 img {
@@ -178,7 +179,7 @@ main {
 .quote-section {
     width: 90%;
     position: relative;
-    padding: 4em 2em;
+    /* padding: 4em 2em; */
     margin-left: auto;
     height: 75vh;
 
@@ -200,12 +201,13 @@ main {
 
 blockquote {
     font-size: 2rem;
-    margin: 0 0 2em 0;
+    padding: 2em 2em 0 2em;
 }
 
 cite {
     position: relative;
     padding-left: 1.25em;
+    margin: 4em;
 }
 
 cite:before {
@@ -215,4 +217,241 @@ cite:before {
     content: '';
     width: 1em;
     border-bottom: 1px solid #fff;
+}
+
+/*  section 2
+    grid + last year's info
+*/
+
+.gallery {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-bottom: 2em;
+}
+
+.gallery-content h2 {
+    font-size: 2.25rem;
+    margin-bottom: 0;
+}
+
+.gallery-content p {
+    font-size: 1.125rem;
+    line-height: 1.45;
+}
+
+.gallery-container {
+    display: grid;
+
+
+    grid-template-areas: ". a b"
+                        "c d ."
+                        ". e .";
+    margin-top: 2em;
+}
+
+.gallery-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.gallery-container img:nth-of-type(1){
+   grid-area: a;
+}
+
+.gallery-container img:nth-of-type(2){
+    grid-area: b;
+ }
+
+ .gallery-container img:nth-of-type(3){
+    grid-area: c;
+ }
+
+ .gallery-container img:nth-of-type(4){
+    grid-area: d;
+ }
+
+ .gallery-container img:nth-of-type(5){
+    grid-area: e;
+ }
+
+ /* contact footer section */
+
+ footer {
+    width: 90%;
+    margin-left: auto;
+    background: var(--main-green);
+ }
+
+ footer h3 {
+    font-size: 2.25rem;
+    background-color: #9FC88C;
+    display: inline-block;
+    padding: 1em 1em 1em 10%;
+    margin: 0;
+ }
+
+ form,
+ .contact-links
+ {
+    padding: 0 4em;
+ }
+
+ form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+
+label {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0;
+}
+
+input {
+    border: none;
+    padding: 0.5em;
+    margin-top: 0.75em;
+}
+
+.btn {
+    background: var(--main-dark);
+    border: none;
+    padding: 0.75em 2em;
+    margin: 1.5em 0;
+    color: #fff;
+    font-size: 2.25rem;
+    cursor: pointer;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-link {
+    padding: 0.75em;
+    font-size: .9rem;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    display: block;
+    border-radius: .2em;
+}
+
+/* 
+    media queries
+
+*/
+
+@media only screen and (min-width: 900px) {
+
+    .upper-bg {
+        width: 80%;
+        grid-template-columns: 60% auto;
+    }
+
+    .quote-section {
+        width: 80%;
+    }
+
+    .hamburger,
+    .menu-close {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        transform: translateX(0);
+        background-color: unset;
+        font-size: 1rem;
+        padding: 0;
+        height:auto;
+        position: unset;
+    }
+
+    .menu li a{
+        font-size: 1.2rem;
+    }
+
+    main {
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        height: 50vh;
+    }
+
+    .intro,
+    .drone-container,
+    blockquote 
+    {
+        max-width: 500px;
+    } 
+
+    /*  quote */
+    .quote-section {
+        display:grid;
+        place-content: center;
+    }
+
+    blockquote, cite {
+        width: 50%;
+        justify-self: center;
+    }
+
+    blockquote {
+        font-size: 2.75rem;
+        padding: 1em;
+    }
+
+    cite {
+        font-size: 2rem;
+        margin: 1em;
+    }
+
+    /* gallery content  */
+
+    .gallery {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .gallery-content {
+        margin-right: 2em;
+    }
+
+    .gallery-content h2 {
+        font-size: 3.5rem;
+    }
+
+    .gallery-container {
+        flex-grow: 2;
+        margin-top: -4em;
+        z-index: 1;
+    }
+
+    footer {
+        display: grid;
+        grid-template-areas: 
+            "header ."
+            "form contact";
+            width: 100%;
+    }
+
+    footer h3 {
+        grid-area: header;
+    }
+
+    form {
+        grid-area: form;
+    }
+
+    .contact-links {
+        grid-area: contact;
+    }
+
 }
