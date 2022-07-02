@@ -72,14 +72,45 @@ header {
     color: var(--main-blue-accent);
 }
 
+/* nav */
+
 .hamburger,
 .menu-close {
     cursor: pointer;
 }
 
 .menu {
-    display: none;
+    transform: translateX(100%);
+    transition: transform .3s;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 66%;
+
     list-style-type: none;
+    background: var(--main-dark-blue);
+    height: 100vh;
+    z-index: 2;
+    padding: 2em 0;
+    margin: 0;
+}
+
+.menu-close,
+.menu li {
+    text-align: right;
+}
+
+.menu-close img {
+    width: 2em;
+    margin: 2em;
+}
+
+.menu li a {
+    color: #fff;
+    display: block; /* need display block on a elements to apply padding! */
+    padding: .4em 1.5em;
+    font-size: 1.75rem;
+    font-weight: normal;
 }
 
 /* style for all that pesky bebas neue */

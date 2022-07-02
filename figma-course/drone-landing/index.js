@@ -6,12 +6,9 @@ hamburgerBtn.addEventListener('click', showNav);
 navClose.addEventListener('click', hideNav);
 
 function showNav() {    
-    nav.style.display = "block";
-    hamburgerBtn.style.display = 'none';
+    nav.style.transform = "translateX(0)";
 }
 
 function hideNav() {
-    nav.style.display = 'none';
-    hamburgerBtn.style.display = 'block';
-
+    nav.style.transform = "translateX(100%)";
 }
